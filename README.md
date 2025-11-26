@@ -61,6 +61,3 @@ requirements.txt
 ## License
 
 This project is shared for educational use. You may modify and adapt it freely for your learning needs.
-
-
-अगर आप चाहें तो मैं README को अंग्रेज़ी/हिंदी मिश्रण, पूरी तरह हिंदी, या और भी प्रोफ़ेशनल शैली में बदल दूँ।
