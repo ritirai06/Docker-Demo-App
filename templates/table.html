@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Multiplication Tables Trainer</h1>
+<p class="lead">Select a number and a range to see its multiplication table.</p>
+
+<form method="post" class="controls">
+    <label for="number">
+        Enter the number (table of)
+        <input type="number" name="number" id="number" min="1" value="{{ number }}" placeholder="e.g. 6">
+    </label>
+    <label for="upto">
+        Practice up to
+        <input type="number" name="upto" id="upto" min="1" value="{{ upto }}" placeholder="e.g. 20">
+    </label>
+    <button type="submit">Show Table</button>
+</form>
+
+<table>
+    <thead>
+        <tr>
+            <th>Expression</th>
+            <th>Answer</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for row in table_rows %}
+        <tr>
+            <td>{{ row.base }} &times; {{ row.multiplier }}</td>
+            <td>{{ row.product }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+<div class="tip">
+    <h2>Study Tip</h2>
+    <p>Say each expression aloud and try to guess the answer before revealing the right column.</p>
+</div>
+{% endblock %}
